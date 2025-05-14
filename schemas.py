@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from datetime import datetime
 
-# Usinas
+
 class UsinaBase(BaseModel):
     nome: str
 
@@ -12,7 +12,7 @@ class UsinaRead(UsinaBase):
     class Config:
         orm_mode = True
 
-# Inversores
+
 class InversorBase(BaseModel):
     nome: str
     usina_id: int
@@ -24,7 +24,6 @@ class InversorRead(InversorBase):
     class Config:
         orm_mode = True
 
-# Leituras
 class LeituraBase(BaseModel):
     timestamp: datetime
     potencia_ativa: float

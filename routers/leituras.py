@@ -122,7 +122,7 @@ def geracao_inversor(
         raise HTTPException(status_code=500, detail=f"Erro ao calcular geração do inversor: {str(e)}")
 
 
-# Geração da usina (soma de todos os inversores da usina)
+
 @router.get("/geracao-usina/")
 def geracao_usina(
     usina_id: int,

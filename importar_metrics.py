@@ -6,7 +6,6 @@ from models import Base, Usina, Inversor, Leitura
 
 Base.metadata.create_all(bind=engine)
 
-# Carrega os dados JSON
 with open("metrics.json", "r") as f:
     dados = json.load(f)
 
